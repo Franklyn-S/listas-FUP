@@ -1,0 +1,22 @@
+ALGORITMO
+	DECLARE m[6][3], i, j, maior, menor NUMERICOS
+	LEIA m[6][3]
+	maior <- 0
+	menor <- m[1][1]
+	PARA i <- 1 ATÉ 6 FAÇA PASSO 1
+	INICIO
+		PARA j <-1 ATÉ 3 FAÇA PASSSO 1
+		INICIO
+			SE maior < m[i][j] ENTAO
+			INCIO
+				maior <- m[i][j]
+			FIM
+			SE menor > m[i][j] ENTAO
+			INICIO
+				menor <- m[i][j]
+			FIM
+		FIM
+	FIM
+
+	ESCREVA("O maior da ,matriz é:", maior, "e o menor é:", menor)
+FIM_ALGORITMO
