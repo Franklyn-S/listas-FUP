@@ -1,0 +1,18 @@
+ALGORITMO
+DECLARE m[4][4], i, j, k,  diagonalP[4]
+	PARA i <- 1 ATÉ 4 FAÇA PASSO 1
+	INICIO
+		PARA j <- 1 ATÉ 4 FAÇA PASSO 1
+		INICIO
+			LEIA m[i][j]
+			SE i == j ENTAO
+			INICIO
+				diagonalP[i] <- m[i][j]
+			FIM
+		FIM
+	FIM
+PARA k <- 1 ATÉ 4 FAÇA PASSO 1
+INICIO 
+	ESCREVA diagonalP[K]
+FIM
+FIM_ALGORITMO
