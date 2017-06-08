@@ -1,6 +1,8 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 '''
-Esse código cria uma matriz 4x4 onde os valores são escolhidos pelo usuário
-e mostra a sua diagonal principal
+Esse código cria uma matriz 4x4, onde os valores são escolhidos pelo usuário
+e após isso mostra a sua diagonal principal
 
 Autor: Franklyn Seabra
 Cursando Ciências da computação no 1º semestre
@@ -9,7 +11,7 @@ Cursando Ciências da computação no 1º semestre
 m = []
 diagonalP = [0,0,0,0]
 
-#preenche a lista com os valores do usuário
+#preenche a matriz com os valores digitados pelo usuário
 for i in range(0,4):
 	m.append([])
 	for j in range(0,4):
@@ -24,6 +26,6 @@ for i in range(0,4):
 	for j in range(0,4):
 		if i == j:
 			diagonalP[i] = m[i][j]
-#imprime a diagonal
-print("As diagonais são: ")
+#imprime a diagonal principal
+print("Os valores da diagonal principal são:")
 print (diagonalP)
