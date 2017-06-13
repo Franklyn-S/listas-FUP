@@ -1,5 +1,5 @@
 ALGORITMO
-DECLARE m[4][4], i, j, k,  diagonalP[4]
+DECLARE m[4][4], i, j, k,  diagonalP[4] NUMERICO
 	PARA i <- 1 ATÉ 4 FAÇA PASSO 1
 	INICIO
 		PARA j <- 1 ATÉ 4 FAÇA PASSO 1

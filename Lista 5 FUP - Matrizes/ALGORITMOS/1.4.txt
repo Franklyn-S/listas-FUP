@@ -1,21 +1,20 @@
-
-ALGORITMO
-DECLARE m[4][4], i, j, k, indice, diagonalP[12]
-indice = 1
-	PARA i <- 1 ATÉ 4 FAÇA PASSO 1
-	INICIO
-		PARA j <- 1 ATÉ 4 FAÇA PASSO 1
-		INICIO
-			LEIA m[i][j]
-			SE i != j ENTAO
-			INICIO
-				diagonalP[indice] <- m[i][j]
-				indice = indice + 1
-			FIM
-		FIM
+ALGORTIMO
+DECLARE m[4][4], i, j, k, l, diagonalS[4] NUMERICO
+ 	PARA i <- 1 ATÉ 4 FAÇA PASSO 1
+ 	INICIO
+ 		PARA j <- 1 ATÉ 4 FAÇA PASSO 1
+ 		INICIO
+ 			LEIA m[i][j]
+ 			SE i+j == 5 ENTAO
+ 			INICIO
+ 				diagonalS[i] <- m[i][j]
+ 			FIM
+ 		FIM
+ 	FIM
+ l <- 0
+ 	PARA K <- 4 ATÉ 1 FAÇA PASSO 1
+ 	INICIO
+ 		l <- l + 1
+ 		diagonalS[k] == diagonal[l] 
 	FIM
-PARA k <- 1 ATÉ 4 FAÇA PASSO 1
-INICIO 
-	ESCREVA diagonalP[K]
-FIM
 FIM_ALGORITMO

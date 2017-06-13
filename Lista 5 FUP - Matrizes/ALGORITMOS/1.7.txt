@@ -1,0 +1,20 @@
+ALGORITMO
+DECLARE matriz[4][4], i, j, k, l, imprimir[12] NUMERICOS
+l = 1
+PARA i <- 1 ATÉ 4 FAÇA PASSO 1
+INICIO
+	PARA j <- 1 ATÉ 4 FAÇA PASSO 1
+	INICIO
+		LEIA matriz[i][j]
+		SE i+j != 5 ENTAO
+		INICIO
+			imprimir[l] = matriz[i][j]
+			l = l + 1
+		FIM
+	FIM
+FIM
+
+PARA k <- 1 ATÉ 12 FAÇA PASSO 1
+INICIO
+	ESCREVA imprimir[k]
+FIM
