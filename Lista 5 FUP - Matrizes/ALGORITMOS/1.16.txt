@@ -1,0 +1,19 @@
+ALGORITMO
+DECLARE matriz[3][3], i, j NUMERICOS
+PARA i <- 1 ATÉ 3 FAÇA PASSO 1
+INICIO
+    PARA j <- 1 ATÉ 3 FAÇA PASSO 1
+    INICIO
+        LEIA matriz[i][j]
+    FIM
+FIM
+
+PARA j <- 1 ATÉ 3 FAÇA PASSO 1
+INICIO
+    PARA i <- 3 ATÉ 1 FAÇA PASSO -1
+    INICIO
+        ESCREVA matriz[i][j]
+    FIM
+    ESCREVA "\n"
+FIM
+FIM_ALGORITMO
