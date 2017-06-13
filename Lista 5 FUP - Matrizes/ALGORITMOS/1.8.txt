@@ -1,0 +1,14 @@
+ALGORITMO
+DECLARE matriz[3][5], vetor[3], i, j, k, soma NUMERICOS
+PARA i <- 1 ATÉ 3 FAÇA PASSO 1
+INICIO
+	soma = 0
+	PARA j <- 1 ATÉ 5 FAÇA PASSO 1
+	INICIO
+		LEIA matriz[i][j]
+		soma = soma + matriz[i][j]
+	vetor[i] = soma
+
+PARA k <- 1 ATÉ 3 FAÇA PASSO 1
+	ESCREVA vetor[k]
+
