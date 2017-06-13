@@ -1,0 +1,25 @@
+ALGORITMO
+DECLARE matriz[3][3], i, j, k, matriz_virada[3][3]
+indice = 3
+PARA i <- 1 ATÉ 3 FAÇA PASSO 1
+INICIO
+	PARA j <- 1 ATÉ 3 FAÇA PASSO 1
+	INICIO
+		LEIA matriz[i][j]			
+	FIM
+FIM
+
+PARA i <- 1 ATÉ 3 FAÇA PASSO 1
+INICIO
+	PARA j <- 1 ATÉ 3 FAÇA PASSO 1
+	INICIO
+		matriz_virada[i][j] = matriz[j][indice]
+	FIM
+	indice = indice - 1
+FIM
+
+PARA k <- 1 ATÉ 3 FAÇA PASSO 1
+INICIO 
+	ESCREVA matriz_virada[k]
+FIM
+FIM_ALGORITMO
