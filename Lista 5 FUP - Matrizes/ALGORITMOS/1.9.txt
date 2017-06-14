@@ -1,0 +1,41 @@
+ALGORTIMO
+DECLARE A[3][2], B[2][5], i, j, k, soma, C[3][5]
+
+PARA i <- 1 ATÉ 3 FAÇA PASSO 1 
+INICIO
+	PARA j <- 1 ATÉ 2 FAÇA PASSO 1
+	INICIO
+		LEIA A[i][j]
+	FIM
+FIM
+
+PARA j <- 1 ATÉ 2 FAÇA PASSO 1 
+INICIO
+	PARA k <- 1 ATÉ 5 FAÇA PASSO 1
+	INICIO
+		LEIA B[i][j]
+	FIM
+FIM
+
+PARA i <- 1 ATÉ 3 FAÇA PASSO 1
+INCIO
+	PARA k <- 1 ATÉ 5 FAÇA PASSO 1
+	INICIO
+		soma <- 0
+		PARA j <- 1 ATÉ 2 FAÇA PASSO 1
+		INICIO
+			soma <- soma + (A[i][j] * B[j][k])
+		FIM
+		C[i][k] <- soma
+	FIM
+FIM
+
+PARA i <- 1 ATÉ 3 FAÇA PASSO 1
+INICIO
+	PARA k <- 1 ATÉ 5 FAÇA PASSO 1
+	INICIO
+		ESCREVA C[i][k]
+	FIM
+FIM
+
+FIM_ALGORITMO
