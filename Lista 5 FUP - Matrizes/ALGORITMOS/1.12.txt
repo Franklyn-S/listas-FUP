@@ -1,0 +1,36 @@
+ALGORITMO
+
+ESCREVA "Digite a quantidade de linhas da matriz:"
+LEIA l
+ESCREVA "Digite a quantidade de colunas da matriz:"
+LEIA c
+
+SE l < 10 E c < 10 ENTAO
+INICIO
+	DECLARE m[l][c], i, j, T[c][l] NUMERICOS
+
+	ESCREVA "Digite os valores da matriz:"
+	PARA i <- 1 ATÉ l FAÇA PASSO 1
+	INICIO
+		PARA j <- 1 ATÉ c FAÇA PASSO 1
+		INICIO
+			LEIA m[i][j]
+		FIM
+	FIM
+
+	PARA i <- 1 ATÉ c FAÇA PASSO 1
+	INICIO
+		PARA j <- 1 ATÉ l FAÇA PASSO 1
+		INICIO
+			t[i][j] <- m[j][i]
+		FIM
+	FIM
+
+	PARA i <- 1 ATÉ c FAÇA PASSO 1
+	INICIO
+		ESCREVA T[i]
+	FIM
+
+FIM
+SENAO  ENTAO
+ESCREVA "A linha e a coluna tem que ser menores que 10"

@@ -1,0 +1,54 @@
+ALGORITMO
+DECLARE m[10][4], i, j, k, digito_curso, maior NUMERICOS
+
+PARA i <- 1 ATÉ 10 FAÇA PASSO 1
+INICIO
+	PARA j <- 1 ATÉ 4 FAÇA PASSO 1
+	INICIO
+		SE j == 1 ENTAO
+		INICIO
+			ESCREVA "Digite a matricula: "
+			LEIA m[i][j] 
+		FIM
+		SENAO SE j == 2 ENTAO
+		INICIO
+			ESCREVA "Digite o sexo(0 para feminino e 1 para masculino): "
+			LEIA m[i][j]
+		FIM
+		SENAO SE j == 3 ENTAO
+		INICIO
+			ESCREVA "Digite o Código do curso: "
+			LEIA m[i][j]
+		FIM
+		SENAO SE j == 4 ENTAO
+		INICIO
+			ESCREVA "Digite o Coeficiente de Rendimento(CR): "
+			LEIA m[i][j]
+		FIM
+	FIM
+FIM
+
+ESCREVA "Digite o dígito do curso para escolher o aluno premiado"
+LEIA digito_curso
+
+maior <- 0
+PARA i <- 1 ATÉ 10 FAÇA PASSO 1
+INICIO
+	SE m[i][4] > maior E m[i][3] == digito_curso  ENTAO
+	INICIO
+		maior <- m[i][4]
+	FIM
+FIM
+
+PARA i <- 1 ATÉ 10 FAÇA PASSO 1
+INICIO
+	SE m[i][4] == maior E m[i][3] == digito_curso  ENTAO
+	INICIO
+		ESCREVA "O aluno de matricula", m[i][1], "foi premiado"
+	FIM
+FIM
+
+SE maior == 0 ENTAO
+INICIO
+	ESCREVA "Dígito de curso inválido"
+FIM

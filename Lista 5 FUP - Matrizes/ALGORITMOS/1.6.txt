@@ -1,5 +1,5 @@
-ALGORITMO
-DECLARE m[4][4], i, j, k, indice, diagonalP[12] NUMERICO
+﻿ALGORITMO
+DECLARE m[4][4], i, j, k, indice, lista[12]
 indice = 1
 	PARA i <- 1 ATÉ 4 FAÇA PASSO 1
 	INICIO
@@ -8,13 +8,13 @@ indice = 1
 			LEIA m[i][j]
 			SE i != j ENTAO
 			INICIO
-				diagonalP[indice] <- m[i][j]
+				lista[indice] <- m[i][j]
 				indice = indice + 1
 			FIM
 		FIM
 	FIM
 PARA k <- 1 ATÉ 4 FAÇA PASSO 1
 INICIO 
-	ESCREVA diagonalP[K]
+	ESCREVA lista[K]
 FIM
 FIM_ALGORITMO
