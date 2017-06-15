@@ -1,0 +1,48 @@
+ALGORITMO
+
+ESCREVA "Digite a quantidade de linhas da matriz:"
+LEIA l
+ESCREVA "Digite a quantidade de colunas da matriz:"
+LEIA c
+SE l < 10 E c < 10 ENTAO
+INICIO
+	DECLARE m[l][c], i, j, T[c][l], teste NUMERICOS
+	DECLARE antisimetrica LOGICO
+	antisimetrica <- falso
+	teste <- 0
+
+	ESCREVA "Digite os valores da matriz:"
+	PARA i <- 1 ATÉ l FAÇA PASSO 1
+	INICIO
+		PARA j <- 1 ATÉ c FAÇA PASSO 1
+		INICIO
+			LEIA m[i][j]
+		FIM
+	FIM
+
+	PARA i <- 1 ATÉ c FAÇA PASSO 1
+	INICIO
+		PARA j <- 1 ATÉ l FAÇA PASSO 1
+		INICIO
+			t[i][j] <- m[j][i]
+		FIM
+	FIM
+
+	PARA i <- 1 ATÉ c FAÇA PASSO 1
+	INICIO
+		PARA j <- 1 ATÉ l FAÇA PASSO 1
+		INICIO
+			SE t[i][j] == -1*(m[i][j]) ENTAO
+			INICIO
+				teste <- teste + 1
+			FIM
+		FIM
+	FIM
+	SE teste == l*c ENTAO
+	INICIO
+		antisimetrica <- True
+	FIM
+	ESCREVA "A matriz é antisimetrica?", antisimetrica
+FIM
+SENAO  ENTAO
+ESCREVA "A linha e a coluna tem que ser menores que 10"

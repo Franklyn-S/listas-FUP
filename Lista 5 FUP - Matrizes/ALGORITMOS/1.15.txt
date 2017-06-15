@@ -1,0 +1,42 @@
+ALGORITMO
+DECLARE soma, i, j, m[3][3], diagonalP[3], diagonalS[3], linha[3], coluna[3], NUMERICOS
+DECLARE quadrado LOGICO
+quadrado <- False
+
+PARA j <- 1 ATÉ 3 FAÇA PASSO 1
+INICIO
+	coluna[j] = 0
+FIM
+
+ESCREVA "\nDigite os valores da matriz:"
+PARA i <- 1 ATÉ 3 FAÇA PASSO 1
+INICIO
+	soma <- 0
+	PARA j <- 1 ATÉ 3 FAÇA PASSO 1
+	INICIO
+		LEIA m[i][j]
+		soma <- soma + m[i][j]
+		SE i == j ENTAO
+		INICIO
+			diagonalP[i] <- m[i][j]
+		FIM
+		SE i+j == 5 ENTAO
+		INICIO
+			diagonalS[i] <- m[i][j]
+		FIM
+		coluna[j] <- coluna[j] + m[i][j]
+	FIM
+	linha[i] <- soma
+FIM
+
+PARA i <- 1 ATÉ 3 FAÇA PASSO 1
+	SE coluna[i] == linha[i] and coluna[i] == diagonalP[i] and coluna[i] == diagonalP[i] ENTAO
+	INICIO
+		quadrado <- True
+	FIM
+SE quadrado == True ENTAO
+INICIO
+	ESCREVA "A matriz é quadrado perfeito!"
+FIM
+SENAO ENTAO
+	ESCREVA "A matriz NÃO é quadrado perfeito!"
