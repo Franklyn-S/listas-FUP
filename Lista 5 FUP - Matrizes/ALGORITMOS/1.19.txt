@@ -1,0 +1,30 @@
+ALGORTIMO
+DECLARE valor_venda[12][4], i, j, k, semana, mes, ano NUMERICOS
+
+PARA i <- 1 ATÉ 12 FAÇA PASSO 1
+INICIO
+	PARA j <- 1 ATÉ 4 FAÇA PASSO 1
+	INICIO
+		LEIA valor_venda[i][j]
+	FIM  
+FIM
+
+ano = 0
+PARA i <- 1 ATÉ 12 FAÇA PASSO 1
+INICIO
+	mes = 0
+	PARA j <- 1 ATÉ 4 FAÇA PASSO 1
+	INICIO
+		semana = valor_media[i][j]
+		ESCREVA "O valor da semana", j, "do mes", i, "foi", semana
+		mes = mes + semana
+	FIM
+	ano = ano + mes
+	ESCREVA "O valor do mês", i, "foi", mes
+FIM
+ESCREVA "O total vendido no ano foi: ", ano 
+
+FIM_ALGORITMO
+
+
+
