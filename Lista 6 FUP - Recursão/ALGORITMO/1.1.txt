@@ -3,4 +3,17 @@ LEIA n
 ESCREVA (calc_bin(n))
 FIM_ALGORIMO
 
-SUB-ROTINA
+SUB-ROTINA calc_bin(n NUMERICO) 
+SE n < 0 ENTAO
+INICIO
+	RETORNE "Número Negativo"
+FIM
+SENAO SE n < 2 ENTAO
+INICIO
+	return texto(n%2)
+FIM
+SENAO ENTAO
+INICIO
+	RETORNE calc_bin(inteiro(n/2)) + texto(n%2)
+FIM
+FIM_SUBROTINA
