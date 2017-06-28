@@ -1,0 +1,19 @@
+ALGORITMO
+	LEIA n
+	print(somatorio(n))
+FIM_ALGORITMO
+
+SUB-ROTINA somatorio(n)	
+	SE n == 0 ENTAO
+	INICIO
+		RETORNE 0
+	FIM
+	SENAO SE n == 1 ENTAO
+	INICIO
+		RETORNE 1
+	FIM
+	SENAO ENTAO
+	INICIO
+		RETORNE n + somatorio(n-1)
+	FIM
+FIM SUB-ROTINA somatorio

@@ -1,0 +1,53 @@
+ALGORITMO
+DECLARE n1, n2 NUMERICOS
+print(multi(n1,n2))
+FIM_ALGORITMO
+
+SUB-ROTINA abs(n)
+	SE n >= 0 ENTAO
+	INICIO
+		RETORNE n
+	FIM
+	SENAO
+	INICIO
+		RETORNE n * (-1)
+	FIM
+FIM SUB-ROTINA abs
+
+SUB-ROTINA soma(n, m)
+	SE n2 == 0 ENTAO
+	INICIO
+		RETORNE n1
+	FIM
+	SENAO SE n2 == 1 ENTAO
+	INICIO
+		RETORNE n1+1
+	FIM
+	SENAO ENTAO
+	INICIO	
+		RETORNE soma(abs(n1)+1, abs(n2)-1)
+	FIM
+FIM_SUB-ROTINA soma
+
+SUB-ROTINA multi(n, m)
+	global n1
+	SE n2 == 0 ou n1 == 0 ENTAO
+	INICIO
+		RETORNE 0
+	FIM
+	SENAO SE n2 == 1 ENTAO
+	INICIO
+		RETORNE n1
+	FIM
+	SENAO ENTAO
+	INICIO
+		SE n1>0 and n2>0 or n1<0 and n2<0	ENTAO
+		INICIO
+			RETORNE multi(soma(n,n1),n2-1)
+		FIM
+		SENAO ENTAO
+		INICIO
+			RETORNE multi(soma(n,n1),n2-1) *(-1)
+		FIM
+	FIM
+FIM_SUB-ROTINA multi

@@ -17,3 +17,4 @@ SUB_ROTINA soma(n1,n2 NUMERICO)
 	INICIO	
 		RETORNE soma(n1+1, n2-1)
 	FIM
+FIM_SUB-ROTINA soma

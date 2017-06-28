@@ -1,0 +1,20 @@
+ALGORITMO
+	ESCREVA "Digite o tamanho do array: "
+	LEIA tam
+	PARA i <- 1 ATÉ tam FAÇA PASSO 1
+	INICIO
+		LEIA n[i]
+	FIM	
+	print(somatorio(len(n)))
+FIM_ALGORITMO
+
+SUB-ROTINA somatorio(v)	
+	SE v > 1 ENTAO
+	INICIO
+		RETORNE n[v] + somatorio(v-1)
+	FIM
+	SENAO ENTAO
+	INICIO
+		RETORNE n[0]
+	FIM
+FIM SUB-ROTINA somatorio

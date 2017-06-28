@@ -1,0 +1,20 @@
+ALGORITMO
+	ESCREVA "Digite o tamanho do array: "
+	LEIA tam
+	PARA i <- 1 ATÉ tam FAÇA PASSO 1
+	INICIO
+		LEIA n[i]
+	FIM	
+	print(inverter(n, 1)
+FIM_ALGORITMO
+
+SUB-ROTINA inverter(array, posicao)
+	SE posicao < len(array)/2 ENTAO
+	INICIO
+		tmp = array[posicao]
+		nova_posicao = len(array)-posicao-1
+		array[posicao] = array[nova_posicao]
+		array[nova_posicao] = tmp
+		inverter(array, posicao+1)
+	FIM
+FIM SUB-ROTINA inverter

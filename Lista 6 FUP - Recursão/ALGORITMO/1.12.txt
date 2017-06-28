@@ -1,0 +1,31 @@
+ALGORITMO
+	ESCREVA "Digite o tamanho do array: "
+	LEIA tam
+	PARA i <- 1 ATÉ tam FAÇA PASSO 1
+	INICIO
+		LEIA n[i]
+	FIM	
+	print(maiorElem(len(n)), n[1])
+FIM_ALGORITMO
+
+SUB-ROTINA maiorElem(t, maior)	
+	SE t == 0 ENTAO
+	INICIO
+		RETORNE 0
+	FIM
+	SENAO SE t == 1 ENTAO
+	INICIO
+		RETORNE maior
+	FIM
+	SENAO ENTAO
+	INICIO
+		SE n[t] > maior ENTAO
+		INICIO
+			RETORNE maiorElem(t-1, n[t])
+		FIM
+		SENAO ENTAO
+		INICIO
+			RETORNE maiorElem(t-1, maior)
+		FIM
+	FIM
+FIM SUB-ROTINA somatorio

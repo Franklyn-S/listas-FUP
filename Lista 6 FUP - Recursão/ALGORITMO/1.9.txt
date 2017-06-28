@@ -1,0 +1,23 @@
+ALGORITMO
+	LEIA n
+	PARA i <- 1 ATÉ n FAÇA PASSO 1
+	INICIO
+		ESCREVA fib(i)
+	FIM
+	print(fib(n))
+FIM_ALGORITMO
+
+SUB-ROTINA fib(n)	
+	SE n == 0 ENTAO
+	INICIO
+		RETORNE n
+	FIM
+	SENAO SE n <= 2 ENTAO
+	INICIO
+		RETORNE 1
+	FIM
+	SENAO ENTAO
+	INICIO
+		RETORNE fib(n-1) + fib(n-2)
+	FIM
+FIM SUB-ROTINA fib
