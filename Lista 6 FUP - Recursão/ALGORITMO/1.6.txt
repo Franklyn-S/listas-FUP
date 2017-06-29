@@ -1,0 +1,29 @@
+ALGORITMO
+	DECLARE n NUMERICO
+	ESCREVA ('Escreva um numero natural n: ')
+	LEIA n
+	gerarComb(n)
+FIM_ALGORITMO
+
+SUB-ROTINA permutacoes (a[] NUMERICO, step NUMERICO)
+    DECLARE lista_cop VETOR
+    SE (NAO step) ENTAO
+        step = 0    
+    SE (step == LEN(array)) ENTAO
+        PARA i <- 1 ATE LEN(array) FACA PASSO 1
+            ESCREVA (array[i])
+    PARA i <- step ATE LEN(array) FACA PASSO 1
+    INICIO
+        lista_cop <- array
+        lista_cop[step] <- lista_cop[i]
+        lista_cop[i] <- lista_cop[step]
+        permutacoes (lista_cop, step + 1)
+    FIM    
+FIM_SUB-ROTINA permutacoes
+
+SUB-ROTINA gerarComb (n NUMERICO)
+    DECLARE letras[] LITERAL
+    PARA i <- 65 ATE 65 + n FACA PASSO 1
+        letras[i] <- CHR(i) #chr do python
+    permutacoes(letras)
+FIM_SUB-ROTINA gerarComb

@@ -1,0 +1,14 @@
+ALGORITMO
+	DECLARE discos NUMÉRICO
+		origem,destino,auxiliar TEXTO
+	resolveHanoi(4,"haste inicial","haste final","haste auxiliar")
+FIM_ALGORITMO    
+
+SUB-ROTINA resolveHanoi(discos, origem, destino,auxiliar)
+    SE (discos > 0) ENTÃO
+	INICIO
+        resolveHanoi(discos-1,origem,auxiliar,destino)
+        ESCREVA "Mover disco ", discos, " de ", origem, " para ", destino
+        resolveHanoi(discos-1,auxiliar,destino,origem)
+	FIM
+FIM_SUB-ROTINA

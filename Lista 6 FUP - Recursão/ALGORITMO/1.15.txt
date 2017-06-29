@@ -3,9 +3,24 @@ ALGORITMO
 	LEIA tam
 	PARA i <- 1 ATÉ tam FAÇA PASSO 1
 	INICIO
-		LEIA n[i]
+		LEIA palavra[i]
 	FIM	
-	print(inverter(n, 1)
+	palavra_original = palavra
+	inverter(palavra,0)
+	teste = 0
+	PARA i <- 1 ATÉ len(palavra_original)
+	INICIO
+		SE palavra_original[i] == palavra[len(palavra_original)-i] ENTAO
+		INICIO
+			teste = teste + 1
+		FIM
+	FIM
+	SE teste == len(palavra_original) ENTAO
+	INICIO
+		ESCREVA "A palavra é um palíndromo"
+	FIM
+	SENAO ENTAO
+		ESCREVA "A palavra NÃO é um palíndromo"
 FIM_ALGORITMO
 
 SUB-ROTINA inverter(array, posicao)
