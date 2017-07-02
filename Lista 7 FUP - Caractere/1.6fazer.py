@@ -1,0 +1,1 @@
+#1.6.Implemente um programa que leia uma cadeia de caracteres e imprima todos os prefixos dessa cadeia.
