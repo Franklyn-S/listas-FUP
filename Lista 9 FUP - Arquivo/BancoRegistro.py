@@ -161,4 +161,3 @@ while run == 1:
 
 	else:
 		print ("Opção inválida!\n")
-

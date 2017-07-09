@@ -1,0 +1,15 @@
+ALGORITMO
+DECLARE habitante[20] REGISTRO
+(
+salario NUMERICO
+idade NUMERICO
+sexo NUMERICO # 1 para masculino e 2 para feminino
+numFilhos NUMERICO
+)
+DECLARE mediaSalario, mediaFilhos, maiorSalario, percMulher NUMERICO
+PARA i <- 1 ATÉ 20 FAÇA PASSO 1
+INICIO
+	ESCREVA 
+	LEIA habitante[i].salario
+FIM
+
