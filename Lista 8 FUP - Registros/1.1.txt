@@ -6,10 +6,42 @@ idade NUMERICO
 sexo NUMERICO # 1 para masculino e 2 para feminino
 numFilhos NUMERICO
 )
-DECLARE mediaSalario, mediaFilhos, maiorSalario, percMulher NUMERICO
+DECLARE mediaSalario, mediaFilhos, maiorSalario, percMulher, somaSalario, somaFilhos NUMERICO
+somaSalario = 0
+somaFilhos = 0
+percMulher = 0
+maiorSalario = 0
+
 PARA i <- 1 ATÉ 20 FAÇA PASSO 1
 INICIO
-	ESCREVA 
+	ESCREVA "Digite o salário: "
 	LEIA habitante[i].salario
+
+	somaSalario += habitante[i].salario
+
+	SE habitante[i].salario > maiorSalario ENTAO
+	INICIO
+		maiorSalario = habitante[i].salario
+	FIM
+
+	ESCREVA "Digite a idade: "
+	LEIA habitante[i].idade
+
+	ESCREVA "Digite o sexo(1 para masculino e 2 para feminino): "
+	LEIA habitante[i].sexo
+
+	ESCREVA "Digite o número de filhos: "
+	LEIA habitante[i].numFilhos
+
+	somaFilhos += habitante[i].numFilhos
+
+	SE habitante[i].salario > 10000 and sexo == 2 ENTAO
+	INICIO
+		percMulher += 1  #(percMulher*100)/20
+	FIM
 FIM
 
+ESCREVA "A média dos salarios é R$", somaSalario/20
+ESCREVA "A média do número de filhos é ", somaFilhos/20
+ESCREVA "O maior salário registrado foi ", maiorSalario
+ESCREVA "O percentual de mulheres com salário superior a R$ 10.000,00 é ", (percMulher*100)/20
