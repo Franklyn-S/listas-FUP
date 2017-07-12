@@ -46,19 +46,19 @@ def mostrarPorAno():
   for dic in tombos:
     if dic["ano"] == novoAno:
       print(dic)
-      return l
+      return dic
 def mostrarPorAutor():
   novoNomeAutor = input("Digite o nome do autor:")
   for dic in tombos:
     if dic["nomeAutor"] == novoNomeAutor:
       print(dic)
-      return l
+      return dic
 def mostrarPorEditora():
   novoNomeEditora = input("Digite o nome da editora:")
   for dic in tombos:
     if dic["nomeAutor"] == novoNomeAutor:
       print(dic)
-      return l
+      return dic
 
 entrada = 0
 while entrada != 6:
